@@ -1,2 +1,0 @@
-<? global $ids,$v; ?>
-<label for="<? echo $ids; ?>" <? if(isset($this->labelclass[$ids])) { echo "class=\"".$this->labelclass[$ids]."\""; } ?>><? echo $this->escape($v); ?></label><textarea name="<? echo $ids; ?>" id="<? echo $ids; ?>" class="texto" cols="100" rows="3" onKeyDown="maxLength('<? echo $ids; ?>', '<? echo $this->info['metadata'][$ids]['LENGTH']; ?>');" onKeyUp="maxLength('<? echo $ids; ?>', '<? echo $this->info['metadata'][$ids]['LENGTH']; ?>');"></textarea>
