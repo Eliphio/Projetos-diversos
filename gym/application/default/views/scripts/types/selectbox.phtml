@@ -1,0 +1,12 @@
+<? global $ids,$v; ?>
+<label for="<? echo $ids; ?>" <? if(isset($this->labelclass[$ids])) { echo "class=\"".$this->labelclass[$ids]."\""; } ?>><? echo $v; ?></label>
+<select name="<? echo $ids; ?>" id="<? echo $ids; ?>" class="texto">
+<?php
+eval("\$select = \$this->$ids;");
+echo "<option value=\"\">Selecione</option>";
+foreach ($select as $opcao)
+{
+	echo "<option value=\"".trim($this->escape($opcao->CODIGO))."\">".trim($this->escape($opcao->DESCRICAO))."-[".trim($this->escape($opcao->CODIGO))."]</option>" . chr(13) . chr(10);
+}
+?>
+</select>

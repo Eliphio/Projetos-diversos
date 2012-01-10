@@ -1,0 +1,9 @@
+<?php
+	global $ids,$v;
+?>
+<label for="<?php echo $ids; ?>"><?php echo $v; ?></label>
+<input name="<?php echo $ids; ?>" type="text" class="texto" id="<?php echo $ids; ?>" onblur="CarregaDesc('<?php echo $ids; ?>', '<?php echo $this->table; ?>')"/>
+<a onClick="CarregaSelBox('<?php echo $ids; ?>');">
+	<img class="visinho" src="<?php echo $this->baseUrl; ?>/publico/img/bot/bt_ajuda.jpg" alt="Ajuda" />
+</a>
+<div id="aparece<? echo $ids; ?>" class="aparece"></div>

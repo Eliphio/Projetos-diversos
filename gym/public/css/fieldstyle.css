@@ -1,0 +1,924 @@
+body{
+	color:#000;
+	background:#FFF;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+fieldset,img{
+	border:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+
+li{
+	list-style:none;
+}
+
+caption,th{
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+}
+
+q:before,q:after{
+	content:'';
+}
+
+abbr,acronym{
+	border:0;
+	font-variant:normal;
+}
+
+sup,sub{
+	line-height:-1px;
+	vertical-align:text-top;
+}
+
+sub{
+	vertical-align:text-bottom;
+}
+
+input, textarea, select{
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+
+body{
+	background: url(../img/bg_app.jpg) repeat-x fixed;
+	font-family: Arial, Tahoma, sans-serif;
+}
+
+/* TOPO DA APLICAÇÃO */
+div#topo{
+	background: url(../img/bg_topo.jpg) no-repeat;
+	position: fixed;
+	width: 100%;
+	height: 137px;
+	z-index: 1001;
+}
+
+/* MARCA DO CLIENTE */
+div.logo{
+       position: absolute;
+       top: 0;
+       left: 15px;
+       width: 185px;
+       height: 65px;
+       padding-top: 10px;
+       line-height: 75px;
+       overflow: hidden;
+       text-align: center;
+}
+img.logo{
+       border: none;
+}
+
+/* MARCA DA APLICAÇÃO (EM PNG TRANSPARENTE) */
+img.nomeapp{
+	position: absolute;
+	left: 225px;
+	top: 15px;
+	margin: 0 15px 0 0;
+}
+
+/* TITULO DA SESSÃO ATUAL */
+h1.sessao{
+	position: absolute;
+	height: 30px;
+	top: 75px;
+	left: 240px;
+	font-size: 18px;
+	letter-spacing: -1px;
+	font-weight: normal;
+	line-height: 30px;
+	text-align: center;
+	color: #C6D2E6;
+	text-transform: uppercase;
+}
+
+/* NOME DA FILIAL */
+h2.filial{
+	width: 185px;
+	height: 23px;
+	position: absolute;
+	top: 75px;
+	left: 15px;
+	font: 9px/23px Tahoma, sans-serif;
+	text-align: center;
+	color: #3D4B58;
+	text-transform: uppercase;
+}
+
+/* BARRA DE FUNÇÕES DA APLICAÇÃO */
+div.barrafuncao{
+	background: url(../img/bg_barrafuncao.png) no-repeat;
+	width: 355px;
+	height: 25px;
+	position: absolute;
+	top: 5px;
+	right: 15px;
+}
+
+/* ÁREA DE DADOS DA APLICAÇÃO */
+div.barrafuncao ul.dados{
+	font: 9px Tahoma, sans-serif;
+	color: white;
+	list-style: none;
+	padding: 0 0 0 5px;
+}
+div.barrafuncao ul.dados li{
+	float: left;
+	height: 25px;
+	line-height: 18px;
+	padding: 0 0 0 20px;
+	margin: 5px 10px 0 0;
+}
+div.barrafuncao ul.dados li.usuario{
+	background: url(../img/usuario.gif) no-repeat;
+}
+div.barrafuncao ul.dados li.data{
+	background: url(../img/data.gif) no-repeat;
+}
+div.barrafuncao ul.dados li{
+	background: url(../img/hora.gif) no-repeat;
+}
+
+/* BOTÕES DE FUNÇÃO DA APLICAÇÃO */
+div.barrafuncao ul.funcao{
+	font: bold 9px/20px Tahoma, sans-serif;
+	list-style: none;
+	overflow: hidden;
+	height: 25px;
+}
+div.barrafuncao ul.funcao li{
+	background: url(../img/bg_abaesq.gif) no-repeat left 0;
+	height: 25px;
+	float: left;
+	display: block;
+	margin: 0 10px 0 0;
+}
+div.barrafuncao ul.funcao li:hover{
+	position: relative;
+	top: -2px;
+}
+div.barrafuncao ul.funcao li a{
+	background: url(../img/bg_abadir.gif) no-repeat right 0;
+	height: 25px;
+	width: 100%;
+	display: block;
+	padding: 0 2px 0 6px;
+	text-decoration: none;
+}
+div.barrafuncao ul.funcao li a,
+div.barrafuncao ul.funcao li a:hover,
+div.barrafuncao ul.funcao li a:visited{
+	color: #3E4D5A;
+}
+div.barrafuncao ul.funcao li.ajuda a,
+div.barrafuncao ul.funcao li.ajuda a:hover,
+div.barrafuncao ul.funcao li.ajuda a:visited{
+	color: #4DBB17;
+}
+div.barrafuncao ul.funcao li.sair a,
+div.barrafuncao ul.funcao li.sair a:hover,
+div.barrafuncao ul.funcao li.sair a:visited{
+	color: #E81717;
+}
+/* BARRA DE FEATURES DE EXPORTAÇÃO */
+div.features{
+	position: absolute;
+	top: 38px;
+	right: 0;
+	height: 39px;
+	background: transparent url(../img/bg_features_seta.png) no-repeat center bottom;
+}
+div.features ul{
+	background: transparent url(../img/bg_features_esq.png) no-repeat left top;
+	height: 32px;
+	padding: 0;
+	margin: 0;
+}
+div.features ul li{
+	list-style: none;
+	height: 32px;
+	display: block;
+	float: left;
+	padding: 0 6px;
+}
+div.features ul li.ultimo{
+	background: transparent url(../img/bg_features_dir.png) no-repeat right top;
+}
+div.features ul li a{
+	border: none;
+	display: block;
+	width: 100%;
+	height: 32px;
+}
+div.features ul li a:hover{
+	position: relative;
+	top: -2px;
+}
+div.features ul li a img{
+	border: none;
+	position: relative;
+	top: 10px;
+}
+/* TUDO DEPOIS DO TOPO */
+div.tela{
+	position: absolute;
+	top: 135px;
+	z-index: 0;
+	width: 100%;
+}
+div.envelope{
+	padding: 15px;
+}
+
+/* FORMULÁRIOS */
+form fieldset{
+	border: 1px solid #BED1DF;
+	background: url(../img/bg_fieldset.gif) repeat-x;
+}
+form fieldset p{
+	padding-left: 30px;
+}
+form fieldset p.destaque{
+	color: #4C8CC9;
+	font-weight: bold;
+}
+form fieldset p.alerta1{
+	font-size: 12px;
+	color: #FF0000;
+	font-weight: bold;
+}
+form fieldset p.alerta2{
+	font-size: 12px;
+	color: #FF6600;
+	font-weight: bold;
+}
+form fieldset p.alerta3{
+	font-size: 12px;
+	color: #009900;
+	font-weight: bold;
+}
+form fieldset h3 {
+	clear: left;
+	width: 100%;
+}
+form legend{
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding: 0 5px;
+	display: block;
+	color: #637585;
+	margin: 0 0 0 20px;
+}
+form label{
+	height: 25px;
+	padding: 0 10px;
+	margin: 0 0 4px 0;
+	display: block;
+	float: left;
+	clear: left;
+	font-size: 12px;
+	line-height: 25px;
+	width: 25%;
+	text-align: right;
+}
+input[type=image].visinho{
+	margin-right: 10px !important;
+}
+form input.texto{height: 19px; /* -2px de borda */}
+form input.texto,form select,form textarea{
+	padding: 4px 0 0 3px; /* nao pode ter padding-right, pq no select option a seta da barra de rolagem fica pra dentro do campo */
+	float: left;
+	display: block;
+	margin: 0 0 4px 0;
+	font-size: 12px;
+	line-height: 25px;
+	color: #3F4F5C;
+	border: 1px solid #D3DCE2;
+	border-top-color: #AEB6BB;
+	background: #E5F0F8 url(../img/quina.gif) no-repeat bottom left;
+}
+form input.texto.erro,form input.texto.erro:focus,
+form select.erro,form select.erro:focus,
+form textarea.erro,form textarea.erro:focus{
+	color: #D70202;
+	border: 1px solid #F89999;
+	border-top-color: #CD7F7F;
+	background: #FFDEDB;
+}
+#error{
+	color: #FFFFFF;
+	border: 3px solid #D70202;
+	border-top-color: #D70202;
+	background: #D70202;
+	display: none;
+	position: fixed;
+	bottom: 0px;
+	margin-left: 450px;
+	}
+form input.naked{height: 19px;}
+form input.naked,form select.naked,form textarea.naked{
+	padding: 4px 0 0 3px; /* nao pode ter padding-right, pq no select option a seta da barra de rolagem fica pra dentro do campo */
+	float: left;
+	display: block;
+	margin: 0 0 4px 0;
+	font-size: 12px;
+	line-height: 25px;
+	color: #3F4F5C;
+	border: none;
+	background: transparent;
+}
+form input.texto.desativado,form select.desativado,form textarea.desativado{
+	color: #9f9f9f;
+	border: 1px solid #dbdbdb;
+	border-top-color: #b5b5b5;
+	background: #eeeeee;
+}
+form select{
+	padding: 5px 0 0 3px;
+}
+form select option{
+	height: 18px;
+}
+form input.texto:focus,form textarea:focus{
+	border-color: #569FCE #68C0F9 #6AC5FF #68C0F9;
+	color: #1279CC;
+}
+br{
+	clear: right;
+	line-height: 25px;
+	height: 25px;
+	margin: 0 0 4px 0;
+}
+div.portabotoes{
+	clear: left;
+	margin: 10px 0 20px 25%;
+	padding: 0 0 0 20px;
+}
+div.portabotoes div.nfe1
+{
+	float: left;
+}
+div.portabotoes div.nfe
+{
+	float: left;
+    padding-left: 10px;
+}
+
+form label.vizinho{
+	clear: none !important;
+	width: auto !important;
+	padding-left: 20px !important;
+}
+img.visinho{
+	float: left;
+}
+div.aparece{
+	float: left;
+	clear: none;
+	margin: 0 0 0 5px;
+}
+/* TABELA DE RETORNO DE DADOS */
+table.resultados{
+	width: 100%;
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	background: #FFF;
+	color: #3B4855;
+	empty-cells: show;
+	border-collapse: separate;
+	border-spacing: 1px;
+}
+table.resultados thead tr{
+    height: 45px;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+table.resultados thead tr td{
+    background: #516371;
+    border-bottom: 2px solid #33414C;
+    color: #E1EAF1;
+    font-weight: bolder;
+    padding: 8px 3px 8px 10px;
+    vertical-align: bottom;
+}
+table.resultados thead tr td a{
+	color: #E1EAF1;
+}
+a.ordenador{
+	text-decoration: none;
+	position: relative;
+	display: inline;
+	padding-right: 15px;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-image: url(../img/ordenador_deselecionado.gif);
+}
+a.ordenador:hover{
+    color: #FFF;
+    background-image: url(../img/ordenador_deselecionado_hover.gif);
+}
+a.ordenador.selecionado{
+    color: #FFF;
+    background-image: url(../img/ordenador_selecionado.gif);
+}
+a.ordenador.selecionado.invertido{
+       color: #FFF;
+       background-image: url(../img/ordenador_selecionado_invertido.gif);
+}
+table.resultados thead tr td.centro{
+	text-align: center;
+}
+table.resultados tbody{
+	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 450px;
+}
+table.resultados.corrida tbody{
+	overflow: auto;
+	overflow-y: auto;
+	overflow-x: auto;
+	height: auto;
+}
+table.resultados tbody tr{
+	height: 28px;
+	vertical-align: middle;
+	line-height: 18px;
+	background: #EDF4FB;
+}
+table.resultados tbody tr.destaque{
+	background: #5FA1DF;
+	color: #FFF;
+	font-weight: bold;
+}
+table.resultados tbody tr.destaque2{
+	background: #8BCBFF;
+	color: #FFF;
+	font-weight: bold;
+}
+table.resultados tbody tr.destaque3{
+	background: #EFFFA6;
+	color: #000;
+	font-weight: normal;
+}
+table.resultados tbody tr{
+	background: #EDF4FB;
+}
+table.resultados tbody tr td{
+	padding: 0 3px 0 10px;
+}
+table.resultados tbody tr td.fim{
+	padding-right: 20px !important;
+}
+table.resultados tbody tr td.centro{
+	text-align: center;
+}
+table.resultados tbody tr td.centro.fim{
+	padding-right: 20px !important;
+}
+table.resultados tbody tr td.valor{
+	text-align: right;
+}
+table.resultados tbody tr td.valor.fim{
+	padding-right: 20px !important;
+}
+table.resultados tbody tr td.texto{
+	text-align: left;
+}
+table.resultados tbody tr td.texto.fim{
+	padding-right: 20px !important;
+}
+table.resultados tbody tr td a{
+	color: #1279CC;
+	text-decoration: none;
+}
+table.resultados tbody tr td a:hover{
+	color: #1279CC;
+	text-decoration: none;
+}
+table.resultados tbody tr.destaque td a{
+	color: #000000;
+	text-decoration: none;
+}
+table.resultados tbody tr.destaque td a:hover{
+	color: #000000;
+	text-decoration: underline;
+}
+table.resultados tbody tr.par{
+	background: #DCEAF8;
+}
+table.resultados tbody tr:hover{
+	background: #EFFFA6;
+	color: #0C1A27;
+}
+table.resultados tbody tr td:hover{
+	background: #E0FF6C;
+}
+table.resultados tfoot{
+	height: 95px;
+}
+table.resultados tfoot tr{
+	vertical-align: top;
+}
+/* RODAPÉ DA TABELA */
+table.rodape{
+	width: 100%;
+	color: #21303C;
+	background: #FFF;
+	empty-cells: show;
+	border-collapse: collapse;
+	border-top: 5px solid #FFF;
+}
+table.rodape thead tr{
+	height: 25px;
+	vertical-align: middle;
+}
+table.rodape thead tr td{
+	background: #85919B;
+	color: #FFF;
+	border-bottom: none;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+td.importante{
+	text-align: right;
+	padding-right: 10px !important;
+	font-weight: bold;
+}
+table.rodape thead tr td.importante{
+	background: #9FA9B1;
+}
+div.tela table.rodape ul{
+	padding: 5px 0 0 0;
+	font-size: 10px;
+}
+div.tela table.rodape ul li{
+	float: left;
+	width: 20%;
+	list-style: square inside !important;
+	height: 15px;
+	line-height: 15px;
+	background: none;
+	line-height: 14px;
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+table.rodape ul li strong{
+	font-weight: bold;
+}
+table.rodape tbody{
+	height: 65px;
+}
+table.rodape tbody tr{
+	background: #97A1AA;
+	color: #21303C;
+	height: 65px;
+}
+table.rodape tbody tr:hover{
+	background: #97A1AA;
+	color: #21303C;
+}
+table.rodape tbody tr td.importante{
+	background: #AEB6BD;
+}
+table.rodape tbody tr td:hover{
+	background: #9AD6FF;
+}
+.checkboxTexto{
+	height: 25px;
+	font-size: 12px;
+	line-height: 25px;
+}
+.imgCalendario{
+	height: 25px;
+	margin: 0 0 4px 5px;
+	float: left;
+	vertical-align: middle;
+}
+/* ICONES DAS TABELAS */
+img.ico{
+       border: none;
+}
+img.ico:hover{
+       position: relative;
+       top: 2px;
+}
+/* Tabs */
+div.tela div.envelope ul.tabs{
+	width: 100%;
+	border-bottom: 3px solid #C3D1DB;
+	height: 28px;
+	font: bold 11px Tahoma, sans-serif;
+	margin: 0 0 10px 0;
+}
+div.tela div.envelope ul.tabs li{
+	background: #BBC1C5 url(../img/tabs_fundolinormal.gif) no-repeat left top;
+	border-bottom: 1px solid #A9AFB3;
+	float: left;
+	height: 25px;
+	position: relative;
+	top: 2px;
+	left: 10px;
+	padding: 0;
+}
+div.tela div.envelope ul.tabs li a{
+	line-height: 25px;
+	padding: 6px 10px;
+	height: 25px;
+	width: 100%;
+	background: url(../img/tabs_fundoanormal.gif) no-repeat right top;
+	color: #345066;
+	text-decoration: none;
+}
+div.tela div.envelope ul.tabs li.atual,
+div.tela div.envelope ul.tabs li:hover{
+	background: #C3D1DB url(../img/tabs_fundoliatual.gif) no-repeat left top;
+	border-bottom: 3px solid #C3D1DB;
+	top: 0;
+}
+div.tela div.envelope ul.tabs li.atual a,
+div.tela div.envelope ul.tabs li a:hover{
+	background: url(../img/tabs_fundoaatual.gif) no-repeat right top;
+}
+/* Layers das tabs */
+div.layer{
+	display: none;
+}
+div.layeratual{
+	width: 100%;
+	display: block;
+}
+/* ESTILOS PARA TEXTOS GENERICOS */
+div.tela h1{
+	font-size: 26px;
+	line-height: 30px;
+	margin: 15px 0 0 0;
+	letter-spacing: -2px;
+	color: #4C8CC9;
+}
+div.tela h1.carrega{
+	margin-top: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	line-height: 12px;
+	color: #34497F
+}
+div.tela h2{
+	color: #69A2D7;
+	letter-spacing: -1px;
+	font-size: 22px;
+	line-height: 26px;
+	margin: 10px 0 0 0;
+}
+div.tela h3{
+	font-size: 18px;
+	line-height: 22px;
+	color: #69A2D7;
+	letter-spacing: -1px;
+	margin: 10px 0 0 0;
+}
+div.tela p, div.tela ul{
+	font-size: 12px;
+	line-height: 22px;
+	color: #3B4651;
+	margin: 0 0 10px 0;
+}
+div.tela p strong{
+	background: #F4FFE2;
+	font-weight: bold;
+}
+div.tela ul{
+	margin: 0;
+	padding: 0;
+}
+div.tela ul li{
+	background: transparent url(../img/bullet.gif) no-repeat 5px 9px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+
+/* ESTILOS PARA O AUTOCOMPLETAR */
+ul#suggest {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul#suggest li {
+	line-height: 16px;
+	margin: 0;
+	padding: 0 0 0 5px;
+	margin: 0 0 0 0;
+	cursor: default;
+	color: #000000;
+	background: #FFFFFF;
+}
+ul#suggest li:hover {
+	background: #D4DEE6;
+}
+.selected {
+	background-color: #cccccc;
+}
+
+/* INTERFACE DE RETORNO DE DADOS DE NOTA FISCAL */
+div.papel{
+	padding: 10px;
+	border: 1px solid #E8E8E8;
+	border-bottom-width: 2px;
+	background: url(../img/bg_papel.jpg);
+}
+div.papel table{
+	width: 100%;
+}
+div.papel table thead tr{
+	border-bottom: 1px solid #B6BFC6;
+	font-size: 14px;
+	line-height: 20px;
+	height: 25px;
+	color: #5F6E7A;
+	letter-spacing: -1px;
+}
+div.papel table tbody tr{
+	height: 20px;
+	font-size: 10px;
+	line-height: 20px;
+	color: #3B4855;
+	border-bottom: 1px solid #EAEBED;
+}
+div.papel table tbody tr:hover{
+	background: #FFF;
+}
+div.papel table tbody td{
+	padding: 0 10px;
+}
+div.papel table tbody td.funcoes{
+	text-align: right;
+}
+
+/* INTERFACE DE LISTAGEM DE ITENS PARA LANCAMENTOS */
+div.lista{
+	padding: 10px;
+	border: 1px solid #E8E8E8;
+	border-bottom-width: 2px;
+	background: url(../img/bg_papel.jpg);
+}
+div.lista table{
+	width: 100%;
+}
+div.lista table thead tr{
+	border-bottom: 1px solid #B6BFC6;
+	font-size: 14px;
+	line-height: 20px;
+	height: 20px;
+	color: #5F6E7A;
+	letter-spacing: -1px;
+}
+div.lista table tbody{
+	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 160px;
+}
+div.lista table tbody tr{
+	height: 20px;
+	font-size: 10px;
+	line-height: 20px;
+	color: #3B4855;
+}
+div.lista table tbody tr:hover{
+	background: #FFF;
+}
+div.lista table tbody td{
+	padding: 0 10px;
+}
+div.lista table tbody td.funcoes{
+	text-align: right;
+}
+div.lista table tbody td.funcoes.fim{
+	padding-right: 25px !important;
+}
+/* CARREGANDO */
+div.tela div.carregando{
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 5000;
+       background: #3B4855;
+       filter:alpha(opacity=80);
+       -moz-opacity:0.8;
+       -khtml-opacity: 0.8;
+       opacity: 0.8;
+}
+div.tela div.boxcarregando{
+       z-index: 5001;
+       width: 235px;
+       height: 85px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       background: url(../img/fundocarregador.png) no-repeat 0 0;
+       overflow: hidden;
+       margin: -42px 0 0 -117px;
+}
+div.tela div.boxcarregando h1{
+       width: 235px;
+       height: 55px;
+       position: relative;
+       top: 15px;
+       background: url(../img/loader.gif) no-repeat center top;
+       padding-top: 28px;
+       font: 18px/22px Arial, sans-serif;
+       color: #43565f;
+       letter-spacing: -1px;
+       text-align: center;
+}
+
+/* ESTILO PARA O RESUMO DA NF-E */
+form span.dados{
+       display: block;
+       height: 25px;
+       font-size: 13px;
+       padding: 0 0 0 5px;
+       clear: right;
+       float: left;
+       color: #444;
+       line-height: 25px;
+}
+
+/* PAGINACAO */
+div#paginacao{
+    float: right;
+    width: 180px; /* alterei esta linha aqui pra mudar o espacamento direito do div */
+    height: 17px;
+    margin: -5px 0 0 0;;
+    padding: 0;
+    position: relative;
+    top: 2px;
+}
+div#paginacao span{
+    float: left;
+    display: block;
+    line-height: 17px;
+    margin: 0 5px 0 0;
+}
+div#paginacao ul{
+    height: 17px;
+    padding: 0 !important;
+}
+div#paginacao ul li{
+    background: none;
+    height: 17px;
+    width: 14px !important;
+    line-height: auto !important;
+    list-style: none inside none !important;
+    float: left;
+    padding: 0;
+    margin: 0 3px 0 0;
+}
+div#paginacao ul li a{
+    text-decoration: none;
+    line-height: 18px;
+    display: block;
+    width: 14px;
+    height: 17px;
+    background: url(../img/ico_pagina.gif) no-repeat 0 0;
+    overflow: hidden;
+    text-align: center;
+    color: #3B4855;
+    filter:alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+div#paginacao ul li a:hover,
+div#paginacao ul li.ativo a{
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+

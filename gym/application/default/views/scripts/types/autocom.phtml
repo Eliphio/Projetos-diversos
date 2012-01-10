@@ -1,0 +1,13 @@
+	<?php global $ids,$v; ?>
+	<label for="<? echo $ids; ?>" <? if(isset($this->labelclass[$ids])) { echo "class=\"".$this->labelclass[$ids]."\""; } ?>><? echo $this->escape($v); ?></label><input name="<? echo $ids; ?>" type="text" class="texto" id="<? echo $ids; ?>">
+	<div style="position:relative;">
+	<div id="<? echo $ids; ?>_UPDATE" class="autocompletar" style="display:none; border: 1px solid #999;font-family: verdana; arial, sans-serif; font-size: 12px;background-color:white;margin: 2px 0 0 0;"></div>
+	<script type="text/javascript">
+	var ent = document.getElementsByTagName('input');
+	new Ajax.Autocompleter('<? echo $ids; ?>','<? echo $ids; ?>_UPDATE',baseUrl+'/ajax/autocomplete', {select: 'selectme', afterUpdateElement: getSelectionId, parameters: 'tabela=<? echo $this->table; ?>&id=<? echo $ids; ?>'});
+		function getSelectionId(text, li) {
+			ent[0].value = li.id;
+			PegaValores(ent[0].id);
+		}
+	</script>
+	</div>

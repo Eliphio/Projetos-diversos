@@ -1,0 +1,11 @@
+#Mon Jan 09 15:03:57 BRST 2012
+eclipse.preferences.version=1
+encoding//application/controllers/AuthController.php=UTF-8
+encoding//application/controllers/IndexController.php=UTF-8
+encoding//application/forms/Login.php=UTF-8
+encoding//application/forms/User.php=UTF-8
+encoding//application/models/DbTable/User.php=UTF-8
+encoding//application/views/scripts/auth/login.phtml=UTF-8
+encoding//application/views/scripts/users/add.phtml=UTF-8
+encoding//application/views/scripts/users/index.phtml=UTF-8
+encoding//public/funcoes.php=UTF-8

@@ -1,0 +1,51 @@
+<?php echo $this->render('cabecalho.phtml');?>
+		<link rel="stylesheet" type="text/css" media="screen"
+        href="<?php echo $this->baseUrl;?>/publico/css/form1.css" />
+        <?php $this->render('estilocampo.phtml'); ?>
+		<script src="<?php echo $this->baseUrl;?>/ajax/funcoes?tabela=<?php echo $this->table; ?>" type="text/javascript"></script>
+		<form id="<? echo $this->id_form; ?>" name="<? echo $this->id_form; ?>" onsubmit="return false;">
+			<?php
+				global $ids, $v;
+				foreach ($this->fieldset as $legenda=>$campos)
+				{
+					?>
+					<fieldset>
+						<legend><?php echo $legenda; ?></legend>
+						<?php
+							foreach ($campos as $ids=>$v)
+							{
+								if ($this->widget[$ids] == '')
+								{
+									$this->widget[$ids] = 'input';
+								}
+								echo $this->render('types/'.$this->widget[$ids].'.phtml');
+							}
+						?>
+					</fieldset>
+					<?php
+				}
+			?>
+			<input type="hidden" name="table<? echo $this->id_form; ?>" id="table<? echo $this->id_form; ?>" class="tabledb" value="<? echo $this->table;?>" style="display:none;">
+			<div class="portabotoes">
+				<div id="botao02"><input class="button" id="enviar" name="enviar" type="image" src="<?php echo  $this->baseUrl; ?>/publico/img/bot/bt_enviar.jpg"></div>
+				<div id="botao01"><input class="button" id="editar" name="editar" type="image" src="<?php echo $this->baseUrl;?>/publico/img/bot/bt_editar.jpg"></div>
+			</div>
+		</form>
+		<script language="javascript">
+				<?php
+				if (isset($this->val_busca))
+				{
+					foreach ($this->val_busca as $k=>$v)
+					{
+						echo "\$('$k').value=\"$v\";";
+					}
+					?>
+					PegaValores('<?php echo $this->chave_pri[count($this->chave_pri)]; ?>');
+				<?php
+				}
+				echo $this->render('javaform.phtml');
+				?>
+		</script>
+		</div></div>
+	</body>
+</html>
